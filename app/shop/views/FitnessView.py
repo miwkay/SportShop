@@ -6,5 +6,5 @@ from shop.models import Fitness
 
 class FitnessView(ListView):
     model = Fitness
-    template_name = 'html/index.html'
+    template_name = 'shop/index.html'
 
