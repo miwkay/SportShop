@@ -2,7 +2,7 @@ from django.db import models
 import BaseModel
 
 
-class Fitness(BaseModel):
+class SportsSimulator(BaseModel):
     ...
 
     def __str__(self):

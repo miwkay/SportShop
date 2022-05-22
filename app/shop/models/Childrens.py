@@ -1,8 +1,8 @@
-from django.db import models
 import BaseModel
+from django.db import models
 
 
-class Fitness(BaseModel):
+class Childrens(BaseModel):
     ...
 
     def __str__(self):
