@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-# from models.Fitness import Fitness
-# from models.SportNutrition import SportNutrition
-# from models.WeightLifting import WeightLifting
+# from model.Fitness import Fitness
+# from model.SportNutrition import SportNutrition
+# from model.WeightLifting import WeightLifting
 #
 # admin.site.register(Fitness)
 # admin.site.register(SportNutrition)
