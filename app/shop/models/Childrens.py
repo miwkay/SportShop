@@ -1,5 +1,4 @@
-import BaseModel
-from django.db import models
+from shop.models.BaseModel import BaseModel
 
 
 class Childrens(BaseModel):
