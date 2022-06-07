@@ -6,7 +6,9 @@ from shop.models.WeightLifting import WeightLifting
 from shop.models.Childrens import Childrens
 from shop.models.SportsSimulator import SportsSimulator
 from shop.models.Tourism import Tourism
+from shop.models.Brand import Brand
 
+admin.site.register(Brand)
 admin.site.register(Fitness)
 admin.site.register(SportNutrition)
 admin.site.register(WeightLifting)
