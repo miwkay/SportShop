@@ -1,5 +1,4 @@
-from django.db import models
-import BaseModel
+from shop.models.BaseModel import BaseModel
 
 
 class Tourism(BaseModel):
