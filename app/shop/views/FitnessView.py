@@ -4,5 +4,5 @@ from shop.models.Fitness import Fitness
 
 
 def fitness_view(request):
-    fitness = Fitness.objects.get()
-    return render(request, "shop/index.html", {'fitness': fitness})
+    fitness = Fitness.objects.all()
+    return render(request, "shop/Fitness.html", {'fitness': fitness})
