@@ -14,6 +14,7 @@ urlpatterns = [
     path('', main_view, name='main_view'),
     path('admin/', admin.site.urls),
     path('brand/', brand_view, name='brand_view'),
+    # path('product/?<category:str>/', product_view, name="product_view")
     path('childrens/', childrens_view, name='childrens_view'),
     path('fitness/', fitness_view, name='fitness_view'),
     path('sportnutrition/', sport_nutrition_view, name='sport_nutrition_view'),
