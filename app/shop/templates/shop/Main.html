@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <title>Main</title>
 </head>
+{% block content %}
+{% if user.is_authenticated %}
+  Welcome, {{ user.email }}!
+  <p><a href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a> |
+  <a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+{% endblock %}
 <style>
 
    h1 {
@@ -35,4 +45,5 @@
     <a href="http://127.0.0.1:8000/tourism"><h3>Tourism</h3></a>
     <a href="http://127.0.0.1:8000/weightlifting"><h3>Weight Lifting</h3></a>
 </body>
+
 </html>

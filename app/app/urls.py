@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from shop.views.BrandView import brand_view
 from shop.views.MainView import main_view
@@ -20,4 +20,7 @@ urlpatterns = [
     path('sportssimulator/', sports_simulator_view, name='sports_simulator_view'),
     path('tourism/', tourism_view, name='tourism_view'),
     path('weightlifting/', weight_lifting_view, name='weight_lifting_view'),
+    path('users/', include('users.urls')),
+    path('users/', include('django.contrib.auth.urls')),
+
 ]

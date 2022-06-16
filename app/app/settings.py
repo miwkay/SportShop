@@ -46,7 +46,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'shop',
+    'users',
+
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
+LOGIN_REDIRECT_URL = 'main_view'
+LOGOUT_REDIRECT_URL = 'main_view'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
