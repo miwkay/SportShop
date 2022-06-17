@@ -19,3 +19,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+
+    class Meta:
+        swappable = 'AUTH_USER_MODEL'
