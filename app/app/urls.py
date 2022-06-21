@@ -9,6 +9,8 @@ from shop.views.SportNutritionView import sport_nutrition_view
 from shop.views.SportsSimulatorView import sports_simulator_view
 from shop.views.TourismView import tourism_view
 from shop.views.WeightLiftingView import weight_lifting_view
+from shop.views.BasketView import product, saveorder
+
 
 urlpatterns = [
     path('', main_view, name='main_view'),
@@ -22,5 +24,7 @@ urlpatterns = [
     path('weightlifting/', weight_lifting_view, name='weight_lifting_view'),
     path('users/', include('users.urls')),
     path('users/', include('django.contrib.auth.urls')),
+    path('product/<uuid:id>/', product),
+    path('saveorder', saveorder),
 
 ]
