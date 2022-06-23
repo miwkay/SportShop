@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <title>Main</title>
 </head>
+{% block content %}
+{% if user.is_authenticated %}
+  <h1>Главная страница</h1>
+  <h4>Welcome, {{ user.email }}!</h4>
+  <p><a href="{% url 'logout' %}"><h4>Log Out</h4></a></p>
+{% else %}
+  <h2>You are not logged in</h2>
+  <h4><a href="{% url 'login' %}">Log In</a> |
+  <a href="{% url 'signup' %}">Sign Up</a></h4>
+{% endif %}
+{% endblock %}
 <style>
 
    h1 {
-    color: gray;
+    color: black;
     background-color: orange;
     width: 25%;
     text-align: center;
@@ -21,12 +32,29 @@
     width: 25%;
     text-align: center;
     padding: 5px;
+    font-family: system-ui;
+   }
+   h2 {
+    color: red;
+    font-size: 20px;
+    background-color: #00bfff;
+    width: 25%;
+    text-align: center;
+    padding: 5px;
     font-family: Arial;
+   }
+   h4 {
+    color: green;
+    font-size: 15px;
+    width: 25%;
+    text-align: center;
+    padding: 0px;
+    font-family: system-ui;
    }
   </style>
 <body>
-    <h1>Главная страница</h1>
-    <a href="http://127.0.0.1:8000/admin"><h3>Admin</h3></a>
+
+    <a href="http://127.0.0.1:8000/admin"><h2>Admin</h2></a>
     <a href="http://127.0.0.1:8000/brand"><h3>Brand</h3></a>
     <a href="http://127.0.0.1:8000/childrens"><h3>Childrens</h3></a>
     <a href="http://127.0.0.1:8000/fitness"><h3>Fitness</h3></a>
@@ -34,5 +62,7 @@
     <a href="http://127.0.0.1:8000/sportssimulator"><h3>Sports Simulator</h3></a>
     <a href="http://127.0.0.1:8000/tourism"><h3>Tourism</h3></a>
     <a href="http://127.0.0.1:8000/weightlifting"><h3>Weight Lifting</h3></a>
+    <a href="http://127.0.0.1:8000/product"><h2>Basket</h2></a>
 </body>
+
 </html>

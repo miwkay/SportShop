@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+    <h1>Вы выбрали {{ product.brand }} {{ product.model }} - {{ product.price }}</h1>
+</head>
+<body>
+    <form method="POST" action="/saveorder">
+        {% csrf_token %}
+        Имя: <input type="text" name="username" />
+        Телефон: <input type="text" name="phone" placeholder="В формате - 093*******" />
+
+        <input type="hidden" value="{{ product.id }}" name="product_id" />
+        <input type="submit" value="Добавить в корзину" name="Добавить в корзину" />
+
+    </form>
+</body>
+</html>

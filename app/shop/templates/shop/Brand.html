@@ -5,6 +5,8 @@
     <title>Brand</title>
 </head>
 <body>
-    {{ brand }}
+    {% for i in brand %}
+        <p><h3> {{ i }} </h3></p>
+    {% endfor %}
 </body>
 </html>

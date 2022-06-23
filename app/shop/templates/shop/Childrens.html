@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Childrens</title>
 </head>
 <body>
-  {{ childrens }}
+    {% for i in childrens %}
+        <p><a href="/product/{{i.id}}"> {{ i.brand }} {{ i.model }} - {{ i.price }} UAH</a></p>
+    {% endfor %}
 </body>
 </html>
