@@ -19,4 +19,4 @@ def saveorder(request):
     b.phone = request.POST['phone']
     b.product = product
     b.save()
-    return render(request, 'shop/Product.html', {"product": product})
+    return render(request, 'shop/Saveorder.html', {"product": product})

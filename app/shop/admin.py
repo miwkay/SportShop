@@ -7,7 +7,7 @@ from shop.models.Basket import Basket
 
 
 class BasketAdmin(admin.ModelAdmin):
-    list_display = ['product', 'email', 'phone', 'date']
+    list_display = ['product', 'name', 'phone', 'date']
 admin.site.register(Basket, BasketAdmin)
 
 admin.site.register(Brand)
