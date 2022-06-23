@@ -17,4 +17,4 @@ class Basket(models.Model):
         verbose_name_plural = 'Корзина'
 
     def __str__(self):
-        return f"{self.email} {self.date}"
+        return f"{self.product} {self.email} {self.phone} {self.date}"
