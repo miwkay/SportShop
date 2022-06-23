@@ -3,7 +3,7 @@ from django.urls import path, include
 
 from shop.views.BrandView import brand_view
 from shop.views.MainView import main_view
-from shop.views.ProductView import product_view
+from shop.views.ProductView import product_view, all_product_view
 from shop.views.BasketView import product, saveorder
 
 
@@ -16,5 +16,6 @@ urlpatterns = [
     path('product/', product_view),
     path('product/<uuid:id>/', product),
     path('saveorder', saveorder),
+    path('category/', all_product_view),
 
 ]

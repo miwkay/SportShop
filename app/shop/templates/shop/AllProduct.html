@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Childrens</title>
+    <title>Products</title>
 </head>
 <body>
-    {% for i in childrens %}
+    {% for i in product %}
         <p><a href="/product/{{i.id}}"> {{ i.brand }} {{ i.model }} - {{ i.price }} UAH</a></p>
     {% endfor %}
 </body>
