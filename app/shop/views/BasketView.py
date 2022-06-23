@@ -5,7 +5,6 @@ from shop.models.Product import Product
 
 # from users.models import CustomUser
 
-
 def product(request, id):
     product = Product.objects.get(pk=id)
     return render(request, 'shop/Product.html', {"product": product})

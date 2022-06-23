@@ -18,6 +18,8 @@ class Product(models.Model):
 
     class Meta:
         ordering = ['-created', ]
+        verbose_name = 'Продукты'
+        verbose_name_plural = 'Продукты'
 
     @property
     def price_display(self):

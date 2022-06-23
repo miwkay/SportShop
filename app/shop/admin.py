@@ -6,12 +6,14 @@ from shop.models.Brand import Brand
 from shop.models.Basket import Basket
 
 
+class BasketAdmin(admin.ModelAdmin):
+    list_display = ['email', 'date']
+admin.site.register(Basket, BasketAdmin)
+
 admin.site.register(Brand)
 admin.site.register(Category)
 admin.site.register(Product)
 
 
 
-class BasketAdmin(admin.ModelAdmin):
-    list_display = ['email', 'date']
-admin.site.register(Basket, BasketAdmin)
+
