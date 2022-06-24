@@ -9,7 +9,8 @@
     <form method="POST" action="/saveorder">
         {% csrf_token %}
         Имя: <input type="text" name="username" placeholder="Ваше имя" />
-        Телефон: <input type="text" name="phone" placeholder="Введите номер телефона" />
+        Почта: <input type="text" name="email" placeholder="Ваша почта" />
+        Телефон: <input type="text" name="phone" placeholder="Ваш номер телефона" />
 
         <input type="hidden" value="{{ product.id }}" name="product_id" />
         <input type="submit" value="Добавить в корзину" name="Добавить в корзину" />

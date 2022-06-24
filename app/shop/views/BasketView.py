@@ -1,3 +1,4 @@
+from django.db import connections
 from django.shortcuts import render
 
 from shop.models.Basket import Basket
@@ -17,6 +18,7 @@ def saveorder(request):
     b = Basket()
     b.name = request.POST['username']
     b.phone = request.POST['phone']
+    b.email = request.POST['email']
     b.product = product
     b.save()
     return render(request, 'shop/Saveorder.html', {"product": product})
