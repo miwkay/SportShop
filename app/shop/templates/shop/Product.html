@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Product</title>
-    <h1>Вы выбрали {{ product.brand }} {{ product.model }} - {{ product.price }} UAH</h1>
+    <h1>Вы выбрали: {{ product.brand }} {{ product.model }} - {{ product.price }} UAH</h1>
 </head>
 <body>
     <form method="POST" action="/saveorder">
         {% csrf_token %}
-        Имя: <input type="text" name="username" />
-        Телефон: <input type="text" name="phone" placeholder="В формате - 093*******" />
+        Имя: <input type="text" name="username" placeholder="Ваше имя" />
+        Телефон: <input type="text" name="phone" placeholder="Введите номер телефона" />
 
         <input type="hidden" value="{{ product.id }}" name="product_id" />
         <input type="submit" value="Добавить в корзину" name="Добавить в корзину" />
