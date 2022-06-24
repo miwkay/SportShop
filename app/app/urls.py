@@ -17,5 +17,4 @@ urlpatterns = [
     path('product/<uuid:id>/', product),
     path('saveorder', saveorder),
     path('category/', category_view),
-
 ]

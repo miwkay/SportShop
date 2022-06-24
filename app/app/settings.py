@@ -34,6 +34,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CART_SESSION_ID = 'Basket'
 
 # Application definition
 
